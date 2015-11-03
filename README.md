@@ -7,7 +7,7 @@
 
 3) put this as the url:
 
-`(javascript:(function()%7Bvar%20el%20%3D%20document.getElementsByClassName('html5-main-video')%5B0%5D%3B%20el.style.transform%20%3D%20el.style.mozTransform%20%3D%20el.style.webkitTransform%20%3D%20'rotateY(180deg)'%7D)())`
+`javascript:(function()%7Bvar%20el%20%3D%20document.getElementsByClassName('html5-main-video')%5B0%5D%3B%20el.style.transform%20%3D%20el.style.mozTransform%20%3D%20el.style.webkitTransform%20%3D%20'rotateY('%20%2B%20(window.beenFlipped%20!%3D%3D%20true%20%3F%20'180'%20%3A%20'0')%20%2B%20'deg)'%3B%20window.beenFlipped%20%3D%20!window.beenFlipped%7D)()`
 
 and set the name as something easy to remember like `Flip Youtube` or something idk
 
